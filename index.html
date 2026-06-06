@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manish Computer Classes - Professional Computer Training Institute. Learn Basic Computer, CCC, Tally, MS Office, Digital Marketing, Graphic Design, Web Design, Programming, and AI Tools.">
+<meta name="keywords" content="computer classes, CCC course, Tally Prime, MS Office, digital marketing, graphic design, web design, programming, AI tools, computer training">
+<title>Manish Computer Classes | Your Success Starts Here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --blue: #0A2463;
+  --blue-mid: #1B4FD8;
+  --blue-light: #3B82F6;
+  --blue-pale: #EFF6FF;
+  --orange: #F97316;
+  --orange-dark: #EA580C;
+  --orange-light: #FED7AA;
+  --white: #FFFFFF;
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-400: #94A3B8;
+  --gray-600: #475569;
+  --gray-800: #1E293B;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --shadow-sm: 0 2px 8px rgba(10,36,99,0.08);
+  --shadow-md: 0 8px 32px rgba(10,36,99,0.12);
+  --shadow-lg: 0 24px 64px rgba(10,36,99,0.18);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-800);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-100); }
+::-webkit-scrollbar-thumb { background: var(--blue-mid); border-radius: 4px; }
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10, 36, 99, 0.97);
+  backdrop-filter: blur(12px);
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+}
+.nav-logo .logo-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: white;
+  flex-shrink: 0;
+}
+.nav-logo .logo-text { line-height: 1.1; }
+.nav-logo .logo-text span:first-child {
+  display: block; font-family: var(--font-head); font-weight: 800;
+  font-size: 1rem; color: white;
+}
+.nav-logo .logo-text span:last-child {
+  font-size: 0.7rem; color: var(--orange-light); letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 4px;
+  list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.85); text-decoration: none;
+  font-size: 0.85rem; font-weight: 500; letter-spacing: 0.3px;
+  padding: 8px 14px; border-radius: 8px;
+  transition: all 0.2s;
+}
+.nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark)) !important;
+  color: white !important; border-radius: 8px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(249,115,22,0.4) !important; background: rgba(0,0,0,0) !important; }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  padding: 6px;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: white; border-radius: 2px; transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ===== HERO ===== */
+#home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--blue) 0%, #0D3A8A 40%, #1B4FD8 100%);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  padding: 100px 5% 60px;
+}
+
+.hero-bg {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute; top: -20%; right: -10%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; bottom: -30%; left: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-grid {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+
+.hero-text { animation: fadeInUp 0.8s ease forwards; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(249,115,22,0.2); border: 1px solid rgba(249,115,22,0.4);
+  color: var(--orange-light); font-size: 0.8rem; font-weight: 600;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.hero-text h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800; line-height: 1.1;
+  color: white; margin-bottom: 18px;
+}
+.hero-text h1 span { color: var(--orange); }
+
+.hero-text p {
+  font-size: 1.05rem; color: rgba(255,255,255,0.8);
+  line-height: 1.7; margin-bottom: 36px; max-width: 480px;
+}
+
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  color: white; text-decoration: none;
+  font-weight: 700; font-size: 0.95rem;
+  padding: 14px 28px; border-radius: 10px; border: none; cursor: pointer;
+  transition: all 0.3s; box-shadow: 0 4px 20px rgba(249,115,22,0.4);
+  font-family: var(--font-body);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(249,115,22,0.5); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.3);
+  color: white; text-decoration: none;
+  font-weight: 600; font-size: 0.95rem;
+  padding: 14px 28px; border-radius: 10px; cursor: pointer;
+  transition: all 0.3s; backdrop-filter: blur(8px);
+  font-family: var(--font-body);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+.hero-stats {
+  display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: var(--orange); }
+.stat .label { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+
+/* Hero Visual */
+.hero-visual {
+  display: flex; justify-content: center; align-items: center;
+  animation: fadeInRight 0.9s ease forwards 0.2s; opacity: 0;
+}
+.hero-visual-inner {
+  position: relative; width: 420px; height: 420px;
+}
+.hero-circle-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(27,79,216,0.1) 60%, transparent 100%);
+  border-radius: 50%; animation: pulse-ring 4s ease-in-out infinite;
+}
+.monitor-svg { width: 100%; height: 100%; }
+
+/* ===== SECTIONS ===== */
+section { padding: 90px 5%; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-tag {
+  display: inline-block;
+  background: var(--blue-pale); color: var(--blue-mid);
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 6px 16px; border-radius: 100px;
+  margin-bottom: 14px;
+}
+.section-title {
+  font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800; color: var(--blue); line-height: 1.2; margin-bottom: 16px;
+}
+.section-title span { color: var(--orange); }
+.section-sub { font-size: 1rem; color: var(--gray-600); max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+/* ===== ABOUT ===== */
+#about { background: var(--gray-50); }
+
+.about-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+.about-img-placeholder {
+  width: 100%; aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+  border-radius: 20px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.about-img-placeholder svg { width: 80%; height: 80%; opacity: 0.9; }
+.about-badge {
+  position: absolute; bottom: -20px; right: -20px;
+  background: var(--orange); color: white;
+  font-family: var(--font-head); font-weight: 800;
+  padding: 16px 24px; border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(249,115,22,0.4);
+  text-align: center; line-height: 1.2;
+}
+.about-badge .big { font-size: 2rem; display: block; }
+.about-badge .small { font-size: 0.75rem; }
+
+.about-text .tag { color: var(--orange); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
+.about-text h2 { font-family: var(--font-head); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--blue); margin: 10px 0 18px; line-height: 1.25; }
+.about-text p { color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px; }
+.about-feat {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: white; border-radius: 12px; padding: 16px;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200);
+}
+.about-feat .icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.about-feat strong { display: block; font-size: 0.9rem; color: var(--blue); margin-bottom: 2px; }
+.about-feat span { font-size: 0.8rem; color: var(--gray-600); }
+
+/* ===== COURSES ===== */
+#courses { background: white; }
+.courses-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+}
+.course-card {
+  background: white; border-radius: var(--radius);
+  border: 1.5px solid var(--gray-200);
+  padding: 28px 24px;
+  transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  cursor: pointer; position: relative; overflow: hidden;
+}
+.course-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--blue-mid), var(--orange));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+}
+.course-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--blue-light); }
+.course-card:hover::before { transform: scaleX(1); }
+
+.course-icon {
+  width: 56px; height: 56px;
+  background: var(--blue-pale); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; margin-bottom: 18px;
+  transition: all 0.3s;
+}
+.course-card:hover .course-icon { background: var(--blue-mid); }
+.course-card h3 { font-family: var(--font-head); font-weight: 700; color: var(--blue); font-size: 1.05rem; margin-bottom: 10px; }
+.course-card p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 18px; }
+.course-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+.course-tag {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.3px;
+  padding: 4px 10px; border-radius: 100px;
+}
+.tag-duration { background: var(--blue-pale); color: var(--blue-mid); }
+.tag-level { background: var(--orange-light); color: var(--orange-dark); }
+.course-enroll {
+  margin-top: 18px; width: 100%;
+  background: linear-gradient(135deg, var(--blue-mid), var(--blue));
+  color: white; border: none; border-radius: 10px;
+  padding: 10px; font-size: 0.9rem; font-weight: 600;
+  cursor: pointer; transition: all 0.3s; font-family: var(--font-body);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.course-enroll:hover { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); }
+
+/* ===== WHY CHOOSE US ===== */
+#why { background: linear-gradient(135deg, var(--blue) 0%, #0D3A8A 100%); }
+#why .section-tag { background: rgba(249,115,22,0.2); color: var(--orange-light); }
+#why .section-title { color: white; }
+#why .section-sub { color: rgba(255,255,255,0.75); }
+
+.why-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+}
+.why-card {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius); padding: 32px 28px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.why-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-4px); }
+.why-icon {
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  border-radius: 16px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: white; margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(249,115,22,0.4);
+}
+.why-card h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 10px; }
+.why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+/* ===== TESTIMONIALS ===== */
+#testimonials { background: var(--gray-50); }
+.testimonials-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+}
+.testimonial-card {
+  background: white; border-radius: var(--radius);
+  border: 1.5px solid var(--gray-200); padding: 28px;
+  transition: all 0.3s; position: relative;
+}
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute; top: 16px; right: 20px;
+  font-size: 5rem; color: var(--blue-pale); font-family: Georgia, serif;
+  line-height: 1;
+}
+.stars { color: #FBBF24; font-size: 0.85rem; margin-bottom: 14px; }
+.testimonial-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-mid), var(--orange));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-family: var(--font-head); font-size: 1.1rem; font-weight: 800;
+  flex-shrink: 0;
+}
+.author-info strong { display: block; font-size: 0.9rem; color: var(--blue); }
+.author-info span { font-size: 0.78rem; color: var(--gray-400); }
+
+/* ===== GALLERY ===== */
+#gallery { background: white; }
+.gallery-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+}
+.gallery-item {
+  border-radius: var(--radius-sm); overflow: hidden;
+  position: relative; aspect-ratio: 1;
+  background: var(--blue-pale); cursor: pointer;
+  transition: all 0.3s;
+}
+.gallery-item:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+.gallery-item:hover { transform: scale(0.98); }
+.gallery-item .gallery-inner {
+  width: 100%; height: 100%; min-height: 160px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: white; gap: 10px; padding: 20px; text-align: center;
+  transition: all 0.3s;
+}
+.gallery-item:hover .gallery-inner { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); }
+.gallery-item .gallery-inner i { font-size: 2.5rem; opacity: 0.8; }
+.gallery-item .gallery-inner span { font-size: 0.85rem; font-weight: 600; opacity: 0.9; }
+
+/* ===== ADMISSION FORM ===== */
+#admission { background: var(--blue-pale); }
+.form-container {
+  max-width: 700px; margin: 0 auto;
+  background: white; border-radius: 24px;
+  padding: 50px 50px; box-shadow: var(--shadow-lg);
+  border: 1.5px solid var(--gray-200);
+}
+.form-group { margin-bottom: 24px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--blue); margin-bottom: 8px; }
+input, select, textarea {
+  width: 100%; padding: 14px 16px; font-size: 0.95rem;
+  font-family: var(--font-body); color: var(--gray-800);
+  background: var(--gray-50); border: 1.5px solid var(--gray-200);
+  border-radius: 10px; outline: none; transition: all 0.2s;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--blue-mid); background: white; box-shadow: 0 0 0 3px rgba(27,79,216,0.12); }
+select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; padding-right: 42px; }
+textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%; padding: 16px;
+  background: linear-gradient(135deg, var(--blue-mid), var(--blue));
+  color: white; border: none; border-radius: 12px;
+  font-size: 1rem; font-weight: 700; font-family: var(--font-body);
+  cursor: pointer; transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.form-submit:hover { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(249,115,22,0.4); }
+
+/* ===== CONTACT ===== */
+#contact { background: var(--gray-800); }
+#contact .section-tag { background: rgba(249,115,22,0.2); color: var(--orange-light); }
+#contact .section-title { color: white; }
+#contact .section-sub { color: rgba(255,255,255,0.7); }
+
+.contact-layout {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info { }
+.contact-block {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.contact-block:last-of-type { border-bottom: none; }
+.contact-block-icon {
+  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+  background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--orange); font-size: 1.2rem;
+}
+.contact-block-text strong { display: block; color: white; font-weight: 600; margin-bottom: 4px; }
+.contact-block-text a, .contact-block-text span { color: rgba(255,255,255,0.7); font-size: 0.9rem; text-decoration: none; }
+.contact-block-text a:hover { color: var(--orange); }
+
+.whatsapp-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #25D366; color: white; text-decoration: none;
+  font-weight: 700; padding: 14px 24px; border-radius: 12px;
+  margin-top: 24px; transition: all 0.3s; font-size: 0.95rem;
+}
+.whatsapp-btn:hover { background: #1EBE5B; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.4); }
+
+.contact-form-wrap {
+  background: rgba(255,255,255,0.06); border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12); padding: 36px;
+}
+.contact-form-wrap input, .contact-form-wrap textarea {
+  background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15);
+  color: white;
+}
+.contact-form-wrap input::placeholder, .contact-form-wrap textarea::placeholder { color: rgba(255,255,255,0.4); }
+.contact-form-wrap label { color: rgba(255,255,255,0.85); }
+.contact-form-wrap input:focus, .contact-form-wrap textarea:focus { border-color: var(--orange); background: rgba(255,255,255,0.1); box-shadow: 0 0 0 3px rgba(249,115,22,0.15); }
+
+.map-placeholder {
+  margin-top: 32px; border-radius: 16px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1); height: 200px;
+  background: rgba(255,255,255,0.05); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px; color: rgba(255,255,255,0.5);
+}
+.map-placeholder i { font-size: 2rem; color: var(--orange); }
+
+/* ===== FOOTER ===== */
+footer {
+  background: #040E2A; color: rgba(255,255,255,0.8);
+  padding: 60px 5% 30px;
+}
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px;
+  margin-bottom: 50px;
+}
+.footer-brand .logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.footer-brand .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: white; }
+.footer-brand .logo-name { font-family: var(--font-head); font-weight: 800; color: white; font-size: 1rem; }
+.footer-brand p { font-size: 0.85rem; line-height: 1.75; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+.social-links { display: flex; gap: 10px; }
+.social-link {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.7); font-size: 1rem; text-decoration: none;
+  transition: all 0.3s;
+}
+.social-link:hover { background: var(--orange); color: white; border-color: var(--orange); transform: translateY(-2px); }
+
+.footer-col h4 { font-family: var(--font-head); font-weight: 700; color: white; margin-bottom: 18px; font-size: 0.95rem; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+.footer-col ul li a:hover { color: var(--orange); }
+.footer-col ul li a i { font-size: 0.7rem; }
+
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+}
+.footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.footer-bottom .made-with { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.footer-bottom .made-with span { color: var(--orange); }
+
+/* ===== FLOATING BUTTONS ===== */
+.float-whatsapp {
+  position: fixed; bottom: 28px; right: 28px; z-index: 900;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #25D366; color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; text-decoration: none;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+  transition: all 0.3s; animation: bounceIn 1s ease 1s both;
+}
+.float-whatsapp:hover { transform: scale(1.1) rotate(-5deg); box-shadow: 0 10px 32px rgba(37,211,102,0.6); }
+.float-whatsapp::before {
+  content: '';
+  position: absolute; inset: -4px; border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.3);
+  animation: ping 2s cubic-bezier(0,0,0.2,1) infinite;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+@keyframes ping {
+  75%, 100% { transform: scale(1.8); opacity: 0; }
+}
+@keyframes bounceIn {
+  from { opacity: 0; transform: scale(0.5); }
+  80% { transform: scale(1.1); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-on-scroll {
+  opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed; top: 70px; left: 0; right: 0;
+    background: var(--blue); flex-direction: column;
+    padding: 20px; gap: 4px;
+    transform: translateY(-110%); transition: transform 0.35s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a { width: 100%; padding: 12px 16px; }
+  .hamburger { display: flex; }
+}
+
+@media (max-width: 768px) {
+  section { padding: 70px 5%; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-btns { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-features { grid-template-columns: 1fr; }
+  .about-badge { right: 0; }
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .form-container { padding: 32px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item:first-child { grid-column: span 2; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== SUCCESS TOAST ===== */
+.toast {
+  position: fixed; bottom: 100px; right: 28px; z-index: 2000;
+  background: #10B981; color: white;
+  padding: 16px 24px; border-radius: 12px;
+  font-weight: 600; font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transform: translateX(120%); transition: transform 0.4s;
+  display: flex; align-items: center; gap: 10px;
+}
+.toast.show { transform: translateX(0); }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="logo-icon"><i class="fa-solid fa-computer"></i></div>
+    <div class="logo-text">
+      <span>Manish Computer Classes</span>
+      <span>Your Success Starts Here</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#admission" class="nav-cta">Join Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fa-solid fa-star"></i> #1 Computer Training Institute</div>
+      <h1>Learn Computer Skills<br>for a <span>Better Future</span></h1>
+      <p>Professional Computer Training Institute offering industry-relevant courses with expert faculty, modern labs, and guaranteed certification to kickstart your career.</p>
+      <div class="hero-btns">
+        <a href="#admission" class="btn-primary"><i class="fa-solid fa-graduation-cap"></i> Join Now</a>
+        <a href="#contact" class="btn-secondary"><i class="fa-solid fa-phone"></i> Contact Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">5000+</div><div class="label">Students Trained</div></div>
+        <div class="stat"><div class="num">15+</div><div class="label">Courses Offered</div></div>
+        <div class="stat"><div class="num">10+</div><div class="label">Years Experience</div></div>
+        <div class="stat"><div class="num">98%</div><div class="label">Placement Rate</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-inner">
+        <div class="hero-circle-bg"></div>
+        <svg class="monitor-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation: float 5s ease-in-out infinite;">
+          <!-- Monitor -->
+          <rect x="60" y="60" width="300" height="210" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+          <rect x="72" y="72" width="276" height="186" rx="8" fill="rgba(27,79,216,0.5)"/>
+          <!-- Screen content -->
+          <rect x="88" y="88" width="120" height="8" rx="4" fill="rgba(249,115,22,0.8)"/>
+          <rect x="88" y="104" width="80" height="6" rx="3" fill="rgba(255,255,255,0.4)"/>
+          <rect x="88" y="118" width="100" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <rect x="88" y="134" width="90" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <!-- Graph bars -->
+          <rect x="88" y="180" width="18" height="50" rx="4" fill="rgba(249,115,22,0.7)"/>
+          <rect x="114" y="165" width="18" height="65" rx="4" fill="rgba(59,130,246,0.8)"/>
+          <rect x="140" y="148" width="18" height="82" rx="4" fill="rgba(249,115,22,0.7)"/>
+          <rect x="166" y="158" width="18" height="72" rx="4" fill="rgba(59,130,246,0.8)"/>
+          <rect x="192" y="140" width="18" height="90" rx="4" fill="rgba(249,115,22,0.9)"/>
+          <!-- Code lines right -->
+          <rect x="240" y="92" width="100" height="6" rx="3" fill="rgba(59,130,246,0.6)"/>
+          <rect x="240" y="106" width="70" height="6" rx="3" fill="rgba(255,255,255,0.4)"/>
+          <rect x="248" y="120" width="80" height="6" rx="3" fill="rgba(249,115,22,0.5)"/>
+          <rect x="248" y="134" width="60" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <rect x="248" y="148" width="90" height="6" rx="3" fill="rgba(59,130,246,0.5)"/>
+          <rect x="240" y="162" width="50" height="6" rx="3" fill="rgba(249,115,22,0.5)"/>
+          <!-- Stand -->
+          <rect x="175" y="270" width="70" height="14" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <rect x="155" y="284" width="110" height="12" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <!-- Keyboard -->
+          <rect x="100" y="320" width="220" height="50" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <!-- Keys -->
+          <g fill="rgba(255,255,255,0.2)">
+            <rect x="112" y="330" width="14" height="10" rx="2"/>
+            <rect x="130" y="330" width="14" height="10" rx="2"/>
+            <rect x="148" y="330" width="14" height="10" rx="2"/>
+            <rect x="166" y="330" width="14" height="10" rx="2"/>
+            <rect x="184" y="330" width="14" height="10" rx="2"/>
+            <rect x="202" y="330" width="14" height="10" rx="2"/>
+            <rect x="220" y="330" width="14" height="10" rx="2"/>
+            <rect x="238" y="330" width="14" height="10" rx="2"/>
+            <rect x="256" y="330" width="14" height="10" rx="2"/>
+            <rect x="274" y="330" width="14" height="10" rx="2"/>
+            <rect x="120" y="346" width="12" height="10" rx="2"/>
+            <rect x="136" y="346" width="12" height="10" rx="2"/>
+            <rect x="152" y="346" width="12" height="10" rx="2"/>
+            <rect x="168" y="346" width="12" height="10" rx="2"/>
+            <rect x="184" y="346" width="12" height="10" rx="2"/>
+            <rect x="200" y="346" width="12" height="10" rx="2"/>
+            <rect x="216" y="346" width="12" height="10" rx="2"/>
+            <rect x="155" y="358" width="110" height="8" rx="4"/>
+          </g>
+          <!-- Floating badges -->
+          <g transform="translate(320, 100)" style="animation: float 4s ease-in-out infinite 0.5s;">
+            <rect x="0" y="0" width="80" height="36" rx="10" fill="rgba(249,115,22,0.9)"/>
+            <text x="10" y="13" fill="white" font-size="9" font-family="sans-serif" font-weight="bold">✓ Certified</text>
+            <text x="10" y="26" fill="rgba(255,255,255,0.8)" font-size="8" font-family="sans-serif">Training</text>
+          </g>
+          <g transform="translate(10, 160)" style="animation: float 4s ease-in-out infinite 1s;">
+            <rect x="0" y="0" width="76" height="36" rx="10" fill="rgba(27,79,216,0.9)"/>
+            <text x="8" y="13" fill="white" font-size="9" font-family="sans-serif" font-weight="bold">⚡ Modern</text>
+            <text x="8" y="26" fill="rgba(255,255,255,0.8)" font-size="8" font-family="sans-serif">Computer Lab</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual animate-on-scroll">
+      <div class="about-img-placeholder">
+        <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Classroom scene -->
+          <rect x="20" y="40" width="360" height="200" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <!-- Whiteboard -->
+          <rect x="140" y="20" width="200" height="120" rx="6" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <text x="200" y="55" fill="rgba(249,115,22,0.9)" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">MANISH</text>
+          <text x="200" y="74" fill="white" font-size="10" font-family="sans-serif" text-anchor="middle">Computer Classes</text>
+          <rect x="155" y="85" width="90" height="5" rx="2" fill="rgba(255,255,255,0.3)"/>
+          <rect x="155" y="98" width="70" height="5" rx="2" fill="rgba(59,130,246,0.6)"/>
+          <rect x="155" y="111" width="80" height="5" rx="2" fill="rgba(255,255,255,0.3)"/>
+          <!-- Students at desks -->
+          <!-- Student 1 -->
+          <circle cx="80" cy="140" r="18" fill="rgba(249,115,22,0.4)" stroke="rgba(249,115,22,0.6)" stroke-width="1.5"/>
+          <circle cx="80" cy="133" r="8" fill="rgba(255,255,255,0.3)"/>
+          <rect x="55" y="170" width="50" height="30" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <rect x="60" y="178" width="40" height="18" rx="2" fill="rgba(27,79,216,0.4)"/>
+          <!-- Student 2 -->
+          <circle cx="195" cy="140" r="18" fill="rgba(59,130,246,0.4)" stroke="rgba(59,130,246,0.6)" stroke-width="1.5"/>
+          <circle cx="195" cy="133" r="8" fill="rgba(255,255,255,0.3)"/>
+          <rect x="170" y="170" width="50" height="30" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <rect x="175" y="178" width="40" height="18" rx="2" fill="rgba(27,79,216,0.4)"/>
+          <!-- Student 3 -->
+          <circle cx="310" cy="140" r="18" fill="rgba(249,115,22,0.4)" stroke="rgba(249,115,22,0.6)" stroke-width="1.5"/>
+          <circle cx="310" cy="133" r="8" fill="rgba(255,255,255,0.3)"/>
+          <rect x="285" y="170" width="50" height="30" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <rect x="290" y="178" width="40" height="18" rx="2" fill="rgba(27,79,216,0.4)"/>
+          <!-- Teacher -->
+          <circle cx="65" cy="65" r="20" fill="rgba(249,115,22,0.5)" stroke="rgba(249,115,22,0.7)" stroke-width="2"/>
+          <circle cx="65" cy="57" r="9" fill="rgba(255,255,255,0.4)"/>
+          <text x="65" y="90" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif" text-anchor="middle">Teacher</text>
+          <!-- Stars -->
+          <text x="350" y="30" fill="rgba(249,115,22,0.8)" font-size="20" font-family="sans-serif">★</text>
+          <text x="30" y="30" fill="rgba(59,130,246,0.6)" font-size="16" font-family="sans-serif">✦</text>
+          <text x="370" y="180" fill="rgba(255,255,255,0.3)" font-size="14" font-family="sans-serif">✦</text>
+          <!-- Floor -->
+          <rect x="20" y="210" width="360" height="30" rx="0" fill="rgba(255,255,255,0.04)" stroke="none"/>
+          <text x="200" y="250" fill="rgba(255,255,255,0.5)" font-size="11" font-family="sans-serif" text-anchor="middle">Modern Computer Lab</text>
+        </svg>
+        <div class="about-badge">
+          <span class="big">10+</span>
+          <span class="small">Years of<br>Excellence</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text animate-on-scroll">
+      <div class="tag"><i class="fa-solid fa-circle-dot"></i> About Us</div>
+      <h2>Empowering Students with<br>Digital Skills Since 2015</h2>
+      <p>Manish Computer Classes is a premier computer training institute committed to providing high-quality, affordable computer education. We believe every student deserves access to digital skills that open doors to better career opportunities.</p>
+      <p>Sabhi courses <strong style="color:var(--blue);">Manish Sir</strong> khud personally padhate hain — unke 10+ saal ke experience aur practical teaching style ki wajah se hazaron students apna career bana chuke hain.</p>
+      <!-- Manish Sir Card -->
+      <div style="background:linear-gradient(135deg,var(--blue-pale),#fff);border:2px solid var(--blue-light);border-radius:16px;padding:20px 22px;display:flex;align-items:center;gap:18px;margin:20px 0 24px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blue-mid),var(--orange));display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;color:white;font-family:var(--font-head);flex-shrink:0;">M</div>
+        <div>
+          <div style="font-family:var(--font-head);font-weight:800;font-size:1.15rem;color:var(--blue);">Manish Sir</div>
+          <div style="font-size:0.82rem;color:var(--gray-600);margin:3px 0 8px;">Founder &amp; Head Trainer — 10+ Years Experience</div>
+          <a href="tel:+917878078814" style="display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:white;text-decoration:none;font-size:0.82rem;font-weight:700;padding:5px 14px;border-radius:100px;"><i class="fa-solid fa-phone"></i> 78780 78814</a>
+        </div>
+      </div>
+      <div class="about-features">
+        <div class="about-feat">
+          <div class="icon">🏆</div>
+          <div>
+            <strong>Personal Attention</strong>
+            <span>Manish Sir khud har student ko guide karte hain</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="icon">💻</div>
+          <div>
+            <strong>Modern Lab</strong>
+            <span>Latest computers with high-speed internet</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="icon">📋</div>
+          <div>
+            <strong>Our Mission</strong>
+            <span>Make quality computer education accessible to all</span>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="icon">🔭</div>
+          <div>
+            <strong>Our Vision</strong>
+            <span>Digitally empower every student in our community</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COURSES ===== -->
+<section id="courses">
+  <div class="section-header animate-on-scroll">
+    <div class="section-tag">Our Courses</div>
+    <h2 class="section-title">Courses We <span>Offer</span></h2>
+    <p class="section-sub">From basic computer skills to advanced programming — we have the right course for every learner at every level.</p>
+  </div>
+  <div class="courses-grid">
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">🖥️</div>
+      <h3>Basic Computer Course</h3>
+      <p>Learn fundamental computer skills including typing, internet browsing, email, and essential software tools for everyday use.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 2 Months</span>
+        <span class="course-tag tag-level">Beginner</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">📜</div>
+      <h3>CCC Course</h3>
+      <p>Course on Computer Concepts — NIELIT certified course covering computer fundamentals, office applications, and internet skills.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 80 Hours</span>
+        <span class="course-tag tag-level">Beginner</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">📊</div>
+      <h3>Tally Prime</h3>
+      <p>Master accounting, GST, billing, inventory, payroll and financial management using the latest version of Tally Prime software.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 3 Months</span>
+        <span class="course-tag tag-level">Intermediate</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">📝</div>
+      <h3>MS Office</h3>
+      <p>Complete training in Word, Excel, PowerPoint, and Outlook. Learn professional document creation, data analysis, and presentations.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 2 Months</span>
+        <span class="course-tag tag-level">Beginner</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">📱</div>
+      <h3>Digital Marketing</h3>
+      <p>SEO, social media marketing, Google Ads, content marketing, email campaigns, and analytics to grow businesses online.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 4 Months</span>
+        <span class="course-tag tag-level">Intermediate</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">🎨</div>
+      <h3>Graphic Design</h3>
+      <p>Learn Photoshop, Illustrator, Canva, and CorelDRAW to create stunning logos, posters, banners, and visual content.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 3 Months</span>
+        <span class="course-tag tag-level">Intermediate</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">🌐</div>
+      <h3>Web Design</h3>
+      <p>HTML, CSS, JavaScript, and responsive design principles to build modern, mobile-friendly websites from scratch.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 4 Months</span>
+        <span class="course-tag tag-level">Intermediate</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">⌨️</div>
+      <h3>Programming Courses</h3>
+      <p>Python, C, C++, and Java programming with hands-on projects, problem solving, and real-world application development.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 6 Months</span>
+        <span class="course-tag tag-level">Advanced</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+    <div class="course-card animate-on-scroll">
+      <div class="course-icon">🤖</div>
+      <h3>AI Tools Training</h3>
+      <p>Master ChatGPT, Midjourney, Gemini, Copilot and other AI tools to supercharge your productivity and creativity.</p>
+      <div class="course-meta">
+        <span class="course-tag tag-duration"><i class="fa-regular fa-clock"></i> 1 Month</span>
+        <span class="course-tag tag-level">All Levels</span>
+      </div>
+      <button class="course-enroll" onclick="scrollToAdmission()"><i class="fa-solid fa-arrow-right"></i> Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section id="why">
+  <div class="section-header animate-on-scroll">
+    <div class="section-tag">Why Choose Us</div>
+    <h2 class="section-title">Why Students <span>Trust Us</span></h2>
+    <p class="section-sub">We are committed to providing the best learning experience with everything you need to succeed in the digital world.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card animate-on-scroll">
+      <div class="why-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+      <h3>Manish Sir — Expert Trainer</h3>
+      <p>Sabhi courses Manish Sir khud padhate hain. Unka 10+ saal ka real-world experience aur simple teaching style students ko jaldi samajhne mein madad karta hai. <br><a href="tel:+917878078814" style="color:var(--orange-light);font-weight:700;">📞 78780 78814</a></p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <div class="why-icon"><i class="fa-solid fa-laptop-code"></i></div>
+      <h3>100% Practical Training</h3>
+      <p>We believe in learning by doing. Every course includes hands-on practice sessions, live projects, and real-world assignments to build actual skills.</p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <div class="why-icon"><i class="fa-solid fa-tag"></i></div>
+      <h3>Affordable Fees</h3>
+      <p>World-class computer education shouldn't break the bank. We offer competitive fees, flexible payment plans, and scholarships for deserving students.</p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <div class="why-icon"><i class="fa-solid fa-certificate"></i></div>
+      <h3>Certificate After Completion</h3>
+      <p>Receive an industry-recognized certificate upon successful course completion, enhancing your resume and proving your skills to employers.</p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <div class="why-icon"><i class="fa-solid fa-briefcase"></i></div>
+      <h3>Placement Guidance</h3>
+      <p>Our dedicated placement cell helps students with interview preparation, resume building, and connects them with top employers in the industry.</p>
+    </div>
+    <div class="why-card animate-on-scroll">
+      <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+      <h3>Flexible Batch Timings</h3>
+      <p>Morning, evening, and weekend batches available to accommodate students, working professionals, and homemakers at their convenience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+  <div class="section-header animate-on-scroll">
+    <div class="section-tag">Student Reviews</div>
+    <h2 class="section-title">What Our <span>Students Say</span></h2>
+    <p class="section-sub">Real stories from real students who transformed their careers through our programs.</p>
+  </div>
+  <div class="testimonials-grid" style="max-width:1100px;margin:0 auto;">
+    <div class="testimonial-card animate-on-scroll">
+      <div class="stars">★★★★★</div>
+      <p>The Tally Prime course at Manish Computer Classes was truly outstanding. The trainer explained everything with real examples. I got a job as an accountant within one month of completing the course!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RK</div>
+        <div class="author-info"><strong>Rahul Kumar</strong><span>Tally Prime Graduate</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card animate-on-scroll">
+      <div class="stars">★★★★★</div>
+      <p>I joined the Digital Marketing course and it completely changed my career. The practical approach and support from the faculty was excellent. Highly recommend to anyone wanting to grow online!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">PS</div>
+        <div class="author-info"><strong>Priya Sharma</strong><span>Digital Marketing Graduate</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card animate-on-scroll">
+      <div class="stars">★★★★★</div>
+      <p>Best computer institute in the area! The faculty is very supportive and the lab facilities are modern. I completed my CCC certification with excellent marks thanks to their guidance.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AM</div>
+        <div class="author-info"><strong>Anjali Mehta</strong><span>CCC Certified</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card animate-on-scroll">
+      <div class="stars">★★★★★</div>
+      <p>The Web Design course was incredibly comprehensive. I built my first website during the training itself! Now I freelance and earn a good income. Thank you Manish Computer Classes!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">VS</div>
+        <div class="author-info"><strong>Vikram Singh</strong><span>Web Design Graduate</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card animate-on-scroll">
+      <div class="stars">★★★★★</div>
+      <p>The AI Tools Training course was a game changer! I now use AI tools daily in my work and have become the most productive person in my office. Excellent course content!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">NP</div>
+        <div class="author-info"><strong>Neha Patel</strong><span>AI Tools Training</span></div>
+      </div>
+    </div>
+    <div class="testimonial-card animate-on-scroll">
+      <div class="stars">★★★★★</div>
+      <p>Affordable fees with world-class training — that's what makes Manish Computer Classes special. The Python programming course gave me the foundation I needed for my software career.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AK</div>
+        <div class="author-info"><strong>Arjun Khanna</strong><span>Python Programming</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="section-header animate-on-scroll">
+    <div class="section-tag">Gallery</div>
+    <h2 class="section-title">Our <span>Campus Life</span></h2>
+    <p class="section-sub">Take a peek into our modern classrooms, computer lab, and student activities.</p>
+  </div>
+  <div class="gallery-grid" style="max-width:1200px;margin:0 auto;">
+    <div class="gallery-item">
+      <div class="gallery-inner" style="min-height:100%;">
+        <i class="fa-solid fa-computer"></i>
+        <span>Modern Computer Lab<br><small style="opacity:.7">30+ High-End Systems</small></span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <span>Expert Classroom</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Certification Ceremony</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <i class="fa-solid fa-users"></i>
+        <span>Group Study Sessions</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <i class="fa-solid fa-code"></i>
+        <span>Coding Workshop</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <i class="fa-solid fa-palette"></i>
+        <span>Design Lab</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <i class="fa-solid fa-wifi"></i>
+        <span>High-Speed Internet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADMISSION FORM ===== -->
+<section id="admission">
+  <div class="section-header animate-on-scroll">
+    <div class="section-tag">Admission</div>
+    <h2 class="section-title">Enroll <span>Today</span></h2>
+    <p class="section-sub">Take the first step towards a better future. Fill out the form and our team will contact you within 24 hours.</p>
+  </div>
+  <div class="form-container animate-on-scroll">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fname"><i class="fa-solid fa-user"></i> Full Name *</label>
+        <input type="text" id="fname" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number *</label>
+        <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email address">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="course"><i class="fa-solid fa-book"></i> Select Course *</label>
+        <select id="course" required>
+          <option value="">-- Choose a Course --</option>
+          <option>Basic Computer Course</option>
+          <option>CCC Course</option>
+          <option>Tally Prime</option>
+          <option>MS Office</option>
+          <option>Digital Marketing</option>
+          <option>Graphic Design</option>
+          <option>Web Design</option>
+          <option>Programming (Python/C/C++/Java)</option>
+          <option>AI Tools Training</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="qualification"><i class="fa-solid fa-school"></i> Qualification</label>
+        <select id="qualification">
+          <option value="">-- Select --</option>
+          <option>10th Pass</option>
+          <option>12th Pass</option>
+          <option>Graduate</option>
+          <option>Post Graduate</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message"><i class="fa-solid fa-message"></i> Additional Message</label>
+      <textarea id="message" placeholder="Any questions or specific requirements..."></textarea>
+    </div>
+    <button class="form-submit" onclick="submitAdmissionForm()">
+      <i class="fa-solid fa-paper-plane"></i> Submit Admission Form
+    </button>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-header animate-on-scroll">
+    <div class="section-tag">Get in Touch</div>
+    <h2 class="section-title">Contact <span>Us</span></h2>
+    <p class="section-sub">Have questions? We're here to help! Reach out through any of the channels below.</p>
+  </div>
+  <div class="contact-layout">
+    <div class="contact-info animate-on-scroll">
+      <div class="contact-block">
+        <div class="contact-block-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="contact-block-text">
+          <strong>Phone Number</strong>
+          <a href="tel:+917878078814">+91 78780 78814</a>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="contact-block-text">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/917878078814" target="_blank">+91 78780 78814</a>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-block-text">
+          <strong>Email Address</strong>
+          <a href="mailto:info@manishcomputerclasses.com">info@manishcomputerclasses.com</a>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="contact-block-text">
+          <strong>Address</strong>
+          <span>City Center, 1st Floor, Shop No. 4, Main Market, Ambaji - 385110</span>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="contact-block-text">
+          <strong>Timings</strong>
+          <span>Mon – Sat: 7:00 AM – 9:00 PM</span>
+        </div>
+      </div>
+      <a href="https://wa.me/917878078814" target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <div class="map-placeholder">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>Ambaji - 385110, Gujarat — Google Maps</span>
+        <small style="font-size:0.75rem;opacity:.6">Click to open directions</small>
+      </div>
+    </div>
+    <div class="contact-form-wrap animate-on-scroll">
+      <h3 style="font-family:var(--font-head);color:white;font-size:1.2rem;margin-bottom:24px;font-weight:700;">Send Us a Message</h3>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="c-name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label>Phone / Email</label>
+        <input type="text" id="c-contact" placeholder="Phone number or email">
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea id="c-msg" placeholder="Write your message here..." style="min-height:120px;"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitContactForm()">
+        <i class="fa-solid fa-paper-plane"></i> Send Message
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-wrap">
+        <div class="logo-icon"><i class="fa-solid fa-computer"></i></div>
+        <span class="logo-name">Manish Computer Classes</span>
+      </div>
+      <p>Your trusted partner in computer education. We are dedicated to empowering students with digital skills for a successful career in today's technology-driven world.</p>
+      <p style="font-style:italic;color:rgba(249,115,22,0.9);font-weight:600;font-size:0.9rem;">"Your Success Starts Here"</p>
+      <div class="social-links" style="margin-top:16px;">
+        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Courses</a></li>
+        <li><a href="#why"><i class="fa-solid fa-chevron-right"></i> Why Choose Us</a></li>
+        <li><a href="#testimonials"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Courses</h4>
+      <ul>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Basic Computer</a></li>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> CCC Course</a></li>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Tally Prime</a></li>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> MS Office</a></li>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Digital Marketing</a></li>
+        <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> AI Tools Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li><a href="tel:+917878078814"><i class="fa-solid fa-phone"></i> +91 78780 78814</a></li>
+        <li><a href="https://wa.me/917878078814"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="mailto:info@manishcomputerclasses.com"><i class="fa-solid fa-envelope"></i> Email Us</a></li>
+        <li><a href="#"><i class="fa-solid fa-location-dot"></i> Ambaji - 385110</a></li>
+        <li><a href="#"><i class="fa-solid fa-clock"></i> Mon–Sat: 7AM–9PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Manish Computer Classes. All Rights Reserved.</p>
+    <p class="made-with">Designed with <span>♥</span> for Digital India</p>
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/917878078814" target="_blank" class="float-whatsapp" title="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i> <span id="toast-msg">Submitted successfully!</span></div>
+
+<script>
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  });
+});
+
+// ===== SCROLL ANIMATION =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+// ===== SMOOTH SCROLL =====
+function scrollToAdmission() {
+  document.getElementById('admission').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== TOAST =====
+function showToast(msg) {
+  document.getElementById('toast-msg').textContent = msg;
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// ===== TOAST ERROR =====
+function showError(msg) {
+  document.getElementById('toast-msg').textContent = msg;
+  const t = document.getElementById('toast');
+  t.style.background = '#EF4444';
+  t.classList.add('show');
+  setTimeout(() => { t.classList.remove('show'); t.style.background = '#10B981'; }, 3500);
+}
+
+// ===== ADMISSION FORM — Formspree =====
+// 👇 Replace YOUR_FORM_ID below after signing up free at https://formspree.io
+const FORMSPREE_ID = 'YOUR_FORM_ID'; // e.g. 'xpwzgkqr'
+
+async function submitAdmissionForm() {
+  const name    = document.getElementById('fname').value.trim();
+  const mobile  = document.getElementById('mobile').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const course  = document.getElementById('course').value;
+  const qual    = document.getElementById('qualification').value;
+  const message = document.getElementById('message').value.trim();
+
+  // Validation
+  if (!name)   { showError('❌ Please enter your full name.'); document.getElementById('fname').focus(); return; }
+  if (!mobile || !/^[6-9]\d{9}$/.test(mobile)) { showError('❌ Please enter a valid 10-digit mobile number.'); document.getElementById('mobile').focus(); return; }
+  if (!course) { showError('❌ Please select a course.'); document.getElementById('course').focus(); return; }
+
+  const btn = document.querySelector('#admission .form-submit');
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+  btn.disabled = true;
+
+  // --- Option A: Formspree (works when FORMSPREE_ID is set) ---
+  if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, mobile, email, course, qualification: qual, message, _subject: `New Admission Enquiry – ${course}` })
+      });
+      if (res.ok) {
+        showToast('🎉 Form submitted! We will call you within 24 hours.');
+        clearAdmissionForm();
+      } else {
+        throw new Error('Server error');
+      }
+    } catch(e) {
+      showError('⚠️ Submission failed. Sending via WhatsApp instead...');
+      setTimeout(() => sendAdmissionViaWhatsApp(name, mobile, course), 1500);
+    }
+  } else {
+    // --- Option B: WhatsApp fallback (always works without setup) ---
+    sendAdmissionViaWhatsApp(name, mobile, course, qual, message);
+  }
+
+  btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Admission Form';
+  btn.disabled = false;
+}
+
+function sendAdmissionViaWhatsApp(name, mobile, course, qual='', message='') {
+  const text = `🎓 *New Admission Enquiry — Manish Computer Classes*\n\n👤 *Name:* ${name}\n📱 *Mobile:* ${mobile}\n📚 *Course:* ${course}\n🎓 *Qualification:* ${qual || 'Not specified'}\n💬 *Message:* ${message || 'No message'}\n\n_Website se bheja gaya — Manish Sir ko call karein: 7878078814_`;
+  const url = `https://wa.me/917878078814?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+  showToast('✅ WhatsApp khul raha hai — Manish Sir ko message jayega!');
+  clearAdmissionForm();
+}
+
+function clearAdmissionForm() {
+  ['fname','mobile','email','course','qualification','message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+}
+
+// ===== CONTACT FORM =====
+async function submitContactForm() {
+  const name    = document.getElementById('c-name').value.trim();
+  const contact = document.getElementById('c-contact').value.trim();
+  const msg     = document.getElementById('c-msg').value.trim();
+
+  if (!name)    { showError('❌ Please enter your name.'); return; }
+  if (!contact) { showError('❌ Please enter phone or email.'); return; }
+  if (!msg)     { showError('❌ Please write a message.'); return; }
+
+  // Send via WhatsApp
+  const text = `📩 *Contact Message — Manish Computer Classes*\n\n👤 *Name:* ${name}\n📞 *Contact:* ${contact}\n💬 *Message:* ${msg}\n\n_Website se bheja gaya_`;
+  window.open(`https://wa.me/917878078814?text=${encodeURIComponent(text)}`, '_blank');
+  showToast('✅ WhatsApp khul raha hai — Manish Sir ko message jayega!');
+  document.getElementById('c-name').value = '';
+  document.getElementById('c-contact').value = '';
+  document.getElementById('c-msg').value = '';
+}
+
+// ===== NAVBAR SCROLL EFFECT =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.35)' : '0 2px 20px rgba(0,0,0,0.2)';
+});
+</script>
+</body>
+</html>
